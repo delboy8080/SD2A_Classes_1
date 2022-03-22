@@ -13,10 +13,10 @@ public:
     Student();
     Student(int id,string name,int age,double height);
 
-    int getID();
-    string getName();
-    int getAge();
-    double getHeight();
+    int getID() const;
+    string getName() const;
+    int getAge() const;
+    double getHeight() const;
 
     void setID(int id);
     void setName(string name);
