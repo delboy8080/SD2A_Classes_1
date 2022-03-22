@@ -26,7 +26,7 @@ void ClockType::increaseBySeconds(int x)
 void ClockType::increaseByMinutes(int x)
 {
     mins += x;
-    if(mins > 60)
+    if(mins >= 60)
     {
         this->increaseByHours(mins/60);
         mins %=60;
