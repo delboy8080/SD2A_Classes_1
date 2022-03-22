@@ -30,3 +30,18 @@ string DayType::getNextDay() const
 {
     return days[(currentDay+1)%7];
 }
+string DayType::getPreviousDay() const
+{
+    return days[(7+(currentDay-1))%7];
+}
+
+string DayType::getDaysInFuture(int x) const
+{
+       return days[(currentDay+x)%7];
+}
+
+string DayType::getDaysInPast(int x) const
+{
+    x=x%7;
+    return days[(7+(currentDay-x))%7];
+}

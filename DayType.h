@@ -18,6 +18,9 @@ public:
     string getCurrentDay() const;
     void printNextDay() const;
     string getNextDay() const;
+    string getPreviousDay() const;
+    string getDaysInFuture(int x) const;
+    string getDaysInPast(int x) const;
 };
 
 

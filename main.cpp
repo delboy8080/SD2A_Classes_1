@@ -48,10 +48,16 @@ int main() {
     pStud = nullptr;
 
     DayType dt;
-    dt.printCurrentDay();
-    dt.printNextDay();
-    dt.setCurrentDay(6);
-    dt.printCurrentDay();
-    dt.printNextDay();
+    for(int i = 0; i < 7; i++)
+    {
+        cout << string(15, '=')<<i <<string(15, '=')  <<endl;
+        dt.setCurrentDay(i);
+        dt.printCurrentDay();
+        dt.printNextDay();
+        string previous = dt.getPreviousDay();
+        cout << "Previous Day: " << previous <<endl;
+        cout << "13 days in the future: "  << dt.getDaysInFuture(13)<<endl;
+        cout << "13 days in the past: "  << dt.getDaysInPast(13)<<endl;
+    }
     return 0;
 }
