@@ -68,5 +68,7 @@ int main() {
     ct.displayCurrentTime();
     ct.setTime(1,15,45);
     ct.displayCurrentTime();
+    cout <<"Elapsed: " << ct.getElapsedTime()
+    <<endl;
     return 0;
 }

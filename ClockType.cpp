@@ -55,3 +55,8 @@ void ClockType::setTime(int hh, int mm, int ss)
     this->mins = mm;
     this->sec = ss;
 }
+
+int ClockType::getElapsedTime()
+{
+    return (hrs*3600)+(mins*60)+sec;
+}

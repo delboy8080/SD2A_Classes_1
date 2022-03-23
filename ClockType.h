@@ -22,6 +22,7 @@ public:
     void displayCurrentTime() const;
     void resetClock();
     void setTime(int hh, int mm, int ss);
+    int getElapsedTime();
 
 };
 #endif //SD2A_CLASSES_1_CLOCKTYPE_H
