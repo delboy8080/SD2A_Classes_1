@@ -56,7 +56,35 @@ void ClockType::setTime(int hh, int mm, int ss)
     this->sec = ss;
 }
 
-int ClockType::getElapsedTime()
+int ClockType::getElapsedTime() const
 {
     return (hrs*3600)+(mins*60)+sec;
+}
+
+int ClockType::getRemaingTime() const
+{
+    return (24*3600)-getElapsedTime();
+}
+
+string ClockType::difference(const ClockType &c)
+{
+    int diff = abs(getElapsedTime() - c.getElapsedTime());
+    int hr = diff/3600;
+    int min = (diff%3600)/60;
+    int sec = diff % 60;
+    string str = to_string(hr)+":"+to_string(min)
+            +":"+to_string(sec);
+    return str;
+
+}
+ClockType ClockType::operator+(int x)
+{
+    ClockType t(*this);
+    t.increaseBySeconds(x);
+    return t;
+}
+ostream& operator<<(ostream& in, ClockType &c)
+{
+    in << c.getCurrentTime() <<endl;
+    return in;
 }

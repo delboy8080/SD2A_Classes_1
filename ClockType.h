@@ -22,7 +22,12 @@ public:
     void displayCurrentTime() const;
     void resetClock();
     void setTime(int hh, int mm, int ss);
-    int getElapsedTime();
+    int getElapsedTime()  const;
+    int getRemaingTime()  const;
+    string difference(const ClockType &c);
+
+    ClockType operator+(int x);
+    friend ostream& operator<<(ostream& in, ClockType &c);
 
 };
 #endif //SD2A_CLASSES_1_CLOCKTYPE_H

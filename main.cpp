@@ -62,7 +62,7 @@ int main() {
     }*/
     ClockType ct(23,59,59);
     cout << ct.getCurrentTime()<<endl;
-    ct.increaseBySeconds(30);
+    ct = ct + 30;
     ct.displayCurrentTime();
     ct.resetClock();
     ct.displayCurrentTime();
@@ -70,5 +70,7 @@ int main() {
     ct.displayCurrentTime();
     cout <<"Elapsed: " << ct.getElapsedTime()
     <<endl;
+
+    cout << ct << endl;
     return 0;
 }
